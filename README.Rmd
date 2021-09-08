@@ -120,7 +120,7 @@ linkedu <- ds %>% filter(partei %in% c("DIE LINKE", "du.")) %>%
                     ,values_from = c(`Position: Position`, `Position: Begründung`)) %>%
         filter(`Position: Position_DIE LINKE` != `Position: Position_du.`)
 
-cat(knitr::kable(linkedu), file='tables/linkedu.md')
+writeLines(knitr::kable(linkedu), 'tables/linkedu.md')
 ```
 
 ## Weitere Ideen
